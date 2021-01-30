@@ -12,8 +12,9 @@ BaseMVVM is the Android project that showcases the MVVM architecture in the basi
 ### Architecture flow
 1. **Activity** injects the ViewModel and starts observing ViewModel's LiveData
 2. **ViewModel** fetches books from the Repository and observes it by RxJava
-3. **Repository** tries to fetch data from the ApiService by RxJava
-3.1  **onSuccess** -- Repository caches data into the Database
-3.2  **onError** -- Repository loads cached data from the Database
+3. **Repository** tries to fetch data from the ApiService by RxJava  
+- **onSuccess** - Repository caches data into the Database
+- **onError** -- Repository loads cached data from the Database
+
 4. **ViewModel** updates LiveData with the response from the Repository
 5. **Activity** shows the response by RecyclerViewAdapter
